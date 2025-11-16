@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "OverSpend - Track Your Subscriptions", description = "Stop losing money to forgotten subscriptions. OverSpend helps you track, manage, and save on recurring payments with smart reminders and spending insights." } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 pt-20 pb-32">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center">
+				<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+					Stop <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Overspending</span><br>
+					on Subscriptions
+				</h1>
+				<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+					Track all your recurring payments in one place. Get smart reminders, see your spending patterns,
+					and never miss a payment again.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="#features" class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+						Start Free Today
+					</a>
+					<a href="#how-it-works" class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
+						Learn More
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section id="features" class="py-20 bg-white">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-gray-900 mb-4">Everything You Need to Manage Subscriptions</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Powerful features designed to help you save money and stay in control of your recurring expenses.
+				</p>
+			</div>
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Calendar View</h3>
+					<p class="text-gray-600">See all your upcoming charges in a clean monthly calendar view. Never be surprised by a renewal again.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">WhatsApp Reminders</h3>
+					<p class="text-gray-600">Get timely reminders 2 days before each charge via WhatsApp, with email fallback when needed.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Monthly Spending Reports</h3>
+					<p class="text-gray-600">Receive detailed monthly summaries of your subscription spending with category breakdowns.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Flexible Billing</h3>
+					<p class="text-gray-600">Free plan for up to 3 subscriptions. Upgrade to Pro for unlimited tracking with Stripe billing.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Secure & Private</h3>
+					<p class="text-gray-600">Your financial data is encrypted and secure. We never share your information with third parties.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Global Currency Support</h3>
+					<p class="text-gray-600">Track subscriptions in any currency. Automatic conversion and real-time exchange rate updates.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How It Works -->
+	<section id="how-it-works" class="py-20 bg-gray-50">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Get started in minutes and take control of your subscription spending.
+				</p>
+			</div>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+						1
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Sign Up</h3>
+					<p class="text-gray-600">Create your free account and add your first subscriptions in minutes.</p>
+				</div>
+				<div class="text-center">
+					<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+						2
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Track & Monitor</h3>
+					<p class="text-gray-600">View all your subscriptions in calendar or list view. See upcoming charges at a glance.</p>
+				</div>
+				<div class="text-center">
+					<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+						3
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-2">Save Money</h3>
+					<p class="text-gray-600">Get reminders, monthly reports, and insights to optimize your subscription spending.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing -->
+	<section class="py-20 bg-white">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Start free and upgrade when you need more features.
+				</p>
+			</div>
+			<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				<div class="border-2 border-gray-200 rounded-lg p-8 hover:border-blue-300 transition-colors">
+					<h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+					<p class="text-4xl font-bold text-gray-900 mb-4">$0<span class="text-lg font-normal text-gray-600">/month</span></p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Up to 3 active subscriptions
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Calendar & list views
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							WhatsApp reminders
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Monthly spending reports
+						</li>
+					</ul>
+					<button class="w-full px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
+						Current Plan
+					</button>
+				</div>
+				<div class="border-2 border-blue-600 rounded-lg p-8 relative">
+					<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+						Popular
+					</div>
+					<h3 class="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
+					<p class="text-4xl font-bold text-gray-900 mb-4">$9<span class="text-lg font-normal text-gray-600">/month</span></p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Unlimited subscriptions
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Advanced analytics
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Custom reminder settings
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Export data (CSV, PDF)
+						</li>
+						<li class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+							</svg>
+							Priority support
+						</li>
+					</ul>
+					<button class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+						Upgrade to Pro
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
+		<div class="container mx-auto px-6 text-center">
+			<h2 class="text-4xl font-bold text-white mb-4">Ready to Take Control of Your Subscriptions?</h2>
+			<p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+				Join thousands of users who are already saving money with OverSpend. Start your free trial today.
+			</p>
+			<button class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors text-lg">
+				Get Started Free
+			</button>
+		</div>
+	</section>
+</Layout>
