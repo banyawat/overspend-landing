@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "Terms of Service - OverSpend", description = "Terms of Service for OverSpend subscription tracking application." } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<div class="max-w-4xl mx-auto px-6 py-16">
+		<div class="prose prose-lg dark:prose-invert max-w-none">
+			<h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">Terms of Service</h1>
+
+			<p class="text-gray-600 dark:text-gray-300 mb-6">Last updated: {new Date().toLocaleDateString()}</p>
+
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Welcome to OverSpend. These Terms of Service ("Terms") govern your use of our subscription tracking service and related products and services (the "Service").
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">1. Acceptance of Terms</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				By accessing and using OverSpend, you accept and agree to be bound by the terms and provision of this agreement.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">2. Description of Service</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				OverSpend is a subscription tracking service that helps users monitor and manage their recurring payments and subscriptions. We provide calendar views, reminders, and spending analytics.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">3. User Accounts</h2>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>You must be at least 18 years old to use this service</li>
+				<li>You are responsible for maintaining the confidentiality of your account</li>
+				<li>You are responsible for all activities that occur under your account</li>
+				<li>You must notify us immediately of any unauthorized use</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">4. Free and Paid Plans</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We offer both free and paid subscription plans. The Free plan allows tracking up to 3 subscriptions, while the Pro plan offers unlimited tracking and additional features.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">5. Privacy and Data Protection</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service, to understand our practices.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">6. Prohibited Uses</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				You may not use our service for any illegal or unauthorized purpose. You may not use our service to:
+			</p>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>Violate any international, federal, provincial, or local laws</li>
+				<li>Infringe upon or violate our intellectual property rights</li>
+				<li>Harass, abuse, insult, harm, defame, or discriminate</li>
+				<li>Submit false or misleading information</li>
+				<li>Upload viruses or other malicious code</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">7. Service Availability</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We strive to maintain the service availability but do not guarantee that the service will be uninterrupted or error-free. We may modify, suspend, or discontinue the service at any time.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">8. Limitation of Liability</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				In no event shall OverSpend, our directors, employees, partners, agents, suppliers, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">9. Termination</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">10. Changes to Terms</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We reserve the right to modify these Terms at any time. If we make material changes, we will notify you by email or by posting a notice on our site prior to the change becoming effective.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">11. Contact Information</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				If you have any questions about these Terms of Service, please contact us at:
+			</p>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Email: support@overspend.me<br>
+				Website: https://overspend.me
+			</p>
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "Privacy Policy - OverSpend", description = "Privacy Policy for OverSpend subscription tracking application." } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+	<div class="max-w-4xl mx-auto px-6 py-16">
+		<div class="prose prose-lg dark:prose-invert max-w-none">
+			<h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">Privacy Policy</h1>
+
+			<p class="text-gray-600 dark:text-gray-300 mb-6">Last updated: {new Date().toLocaleDateString()}</p>
+
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				At OverSpend, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">1. Data We Collect</h2>
+
+			<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-6 mb-3">Personal Information</h3>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>Name and email address (for account creation)</li>
+				<li>Subscription information (service names, amounts, billing dates)</li>
+				<li>WhatsApp number (for reminder notifications, optional)</li>
+			</ul>
+
+			<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-6 mb-3">Usage Data</h3>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>Pages visited and time spent on our website</li>
+				<li>Features used within the application</li>
+				<li>Device information and browser type</li>
+				<li>IP address and general location information</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">2. How We Use Your Data</h2>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>To provide and maintain our subscription tracking service</li>
+				<li>To send you reminder notifications about upcoming payments</li>
+				<li>To generate monthly spending reports</li>
+				<li>To improve our service and user experience</li>
+				<li>To communicate with you about service updates</li>
+				<li>To ensure security and prevent fraud</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">3. Data Security</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. This includes:
+			</p>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>SSL encryption for data transmission</li>
+				<li>Encrypted storage of sensitive information</li>
+				<li>Regular security audits and updates</li>
+				<li>Access controls and authentication systems</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">4. Third-Party Services</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We use the following third-party services:
+			</p>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li><strong>Stripe:</strong> For payment processing (Pro plan subscriptions)</li>
+				<li><strong>WhatsApp API:</strong> For sending reminder notifications</li>
+				<li><strong>Google Analytics:</strong> For website usage analytics</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">5. Data Retention</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We retain your personal data for as long as necessary to provide our services and comply with legal obligations. You can request deletion of your account and associated data at any time.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">6. Your Rights</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				You have the right to:
+			</p>
+			<ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-6">
+				<li>Access your personal data</li>
+				<li>Correct inaccurate data</li>
+				<li>Request deletion of your data</li>
+				<li>Object to processing of your data</li>
+				<li>Request data portability</li>
+			</ul>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">7. Cookies</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">8. International Data Transfers</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Your personal data may be transferred to, and maintained on, computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">9. Children's Privacy</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Our service does not address anyone under the age of 18. We do not knowingly collect personally identifiable information from anyone under the age of 18.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">10. Changes to This Policy</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mt-8 mb-4">11. Contact Us</h2>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				If you have any questions about this Privacy Policy, please contact us:
+			</p>
+			<p class="text-gray-600 dark:text-gray-300 mb-6">
+				Email: privacy@overspend.me<br>
+				Website: https://overspend.me
+			</p>
+		</div>
+	</div>
+</Layout>
